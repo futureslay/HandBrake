@@ -1760,7 +1760,7 @@ static int hb_qsv_collect_adapters_details(hb_list_t *hb_qsv_adapter_details_lis
                 {
                     if (hb_qsv_hardware_generation(hb_qsv_get_platform(details->index)) >= QSV_G7)
                     {
-                        query_capabilities(session, details->index, details->qsv_hardware_version, &details->qsv_hardware_info_avc, MFX_CODINGOPTION_ON);
+                        query_capabilities(session, details->index, details->qsv_hardware_version, &details->qsv_hardware_info_avc, MFX_CODINGOPTION_OFF);
                     }
                     if (details->qsv_hardware_info_avc.available == 0)
                     {
@@ -1769,7 +1769,7 @@ static int hb_qsv_collect_adapters_details(hb_list_t *hb_qsv_adapter_details_lis
                     details->qsv_hardware_info_avc.implementation = hw_impl | hw_preference;
                     if (hb_qsv_hardware_generation(hb_qsv_get_platform(details->index)) >= QSV_G7)
                     {
-                        query_capabilities(session, details->index, details->qsv_hardware_version, &details->qsv_hardware_info_hevc, MFX_CODINGOPTION_ON);
+                        query_capabilities(session, details->index, details->qsv_hardware_version, &details->qsv_hardware_info_hevc, MFX_CODINGOPTION_OFF);
                     }
                     if (details->qsv_hardware_info_hevc.available == 0)
                     {
